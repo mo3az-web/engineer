@@ -41,7 +41,7 @@ const navigation = [
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [announcementOpen, setAnnouncementOpen] = useState(true)
+ 
   const [scrollY, setScrollY] = useState(0)
 
 useEffect(() => {
@@ -60,8 +60,7 @@ useEffect(() => {
   dir="rtl"
   className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-gray-950/90 text-white backdrop-blur-md"
 >
-
-
+      {/* ================= Announcement Bar ================= */}
       {/* ================= Main Navbar ================= */}
       <nav
         aria-label="التنقل الرئيسي"
@@ -138,7 +137,7 @@ useEffect(() => {
         absolute
         right-6/39
         top-4/15
-        z-[1000]
+        z-1000
         w-27
 
         md:w-27

@@ -1,6 +1,4 @@
 import { Canvas } from "@react-three/fiber";
-
-import clsx from "clsx"
 import SprinklerView from "./modelsView/fireSprinklerModelViewer";
 import { StudioLights } from "./3dHelpers/StudioLight";
 

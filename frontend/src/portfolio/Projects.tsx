@@ -1,4 +1,3 @@
-import React from "react";
 
 const projectSections = [
   {
@@ -720,17 +719,17 @@ const Projects = () => {
                 relative
                 mb-20
                 flex
-                h-[420px]
+                h-420px
                 w-full
                 items-center
                 justify-center
                 overflow-hidden
-                rounded-[2rem]
+                rounded-2rem
                 border
                 border-slate-200
                 bg-slate-50
-                sm:h-[500px]
-                lg:h-[620px]
+                sm:h-500px
+                lg:h-620px
               "
             >
 
