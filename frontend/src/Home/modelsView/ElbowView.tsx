@@ -1,15 +1,14 @@
-
 import { PresentationControls } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from "three";
-import SprinklerModel from "../../models/Fire_sprinkler";
+import ElbowModel from "../../models/Push-fit_90_elbow";
 
-interface SprinklerViewProps {
+interface ElbowViewProps {
   isHovered: boolean;
 }
 
-const  SprinklerView = ({ isHovered }: SprinklerViewProps) => {
+const ElbowView = ({ isHovered }: ElbowViewProps) => {
   const modelRef = useRef<THREE.Group>(null);
 
   const controlsConfig = {
@@ -32,12 +31,11 @@ const  SprinklerView = ({ isHovered }: SprinklerViewProps) => {
 
   return (
     <PresentationControls {...controlsConfig}>
-      <group ref={modelRef} scale={[.2, .2, .2]}>
-        <SprinklerModel />
+      <group ref={modelRef} scale={[40, 40, 40]}>
+        <ElbowModel />
       </group>
     </PresentationControls>
   );
 };
 
-export default SprinklerView;
-
+export default ElbowView;

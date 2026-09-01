@@ -1,4 +1,18 @@
 @import "tailwindcss";
+
+@theme {
+  --animate-logo-slider: logo-slider 25s linear infinite;
+
+  @keyframes logo-slider {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
 body {
 
   background-size: cover;

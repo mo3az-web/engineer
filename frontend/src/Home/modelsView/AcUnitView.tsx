@@ -3,13 +3,12 @@ import { PresentationControls } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from "three";
-import SprinklerModel from "../../models/Fire_sprinkler";
-
-interface SprinklerViewProps {
+import  AcModel  from "../../models/Free_ac_unit";
+interface AcUnitViewProps {
   isHovered: boolean;
 }
 
-const  SprinklerView = ({ isHovered }: SprinklerViewProps) => {
+const  AcView = ({ isHovered }: AcUnitViewProps) => {
   const modelRef = useRef<THREE.Group>(null);
 
   const controlsConfig = {
@@ -32,12 +31,11 @@ const  SprinklerView = ({ isHovered }: SprinklerViewProps) => {
 
   return (
     <PresentationControls {...controlsConfig}>
-      <group ref={modelRef} scale={[.2, .2, .2]}>
-        <SprinklerModel />
+      <group ref={modelRef} scale={[1, 1, 1]}>
+        <AcModel />
       </group>
     </PresentationControls>
   );
 };
 
-export default SprinklerView;
-
+export default AcView;

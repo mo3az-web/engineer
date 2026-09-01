@@ -35,7 +35,7 @@ const services = [
 const navigation = [
   { name: 'الرئيسية', href: '#' },
   { name: 'عن المكتب', href: '#about' },
-  { name: 'مشاريعنا', href: '#projects' },
+  { name: 'مشاريعنا', href: 'projects' },
   { name: 'تواصل معنا', href: '#contact' },
 ]
 
@@ -71,7 +71,7 @@ useEffect(() => {
         <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-start lg:gap-x-8">
 
           <a
-            href="#"
+            href="/"
             className="text-sm font-semibold text-white transition hover:text-red-400"
           >
             الرئيسية
@@ -106,14 +106,14 @@ useEffect(() => {
           </div>
 
           <a
-            href="#about"
+            href="about"
             className="text-sm font-semibold text-gray-300 transition hover:text-white"
           >
             عن المكتب
           </a>
 
           <a
-            href="#projects"
+            href="projects"
             className="text-sm font-semibold text-gray-300 transition hover:text-white"
           >
             مشاريعنا

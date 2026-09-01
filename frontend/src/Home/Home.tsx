@@ -1,16 +1,14 @@
 
 import AboutEng from "../portfolio/AboutEng";
-import Projects from "../portfolio/Projects";
 import Hero from "./Hero";
-import Navbar from "./Navbar";
+import LogoSlider from "./LogoSlider";
 
 const Home = () => {
   return (
    <div >
-      <Navbar />
       <Hero/>
       <AboutEng/>
-      <Projects/>
+      <LogoSlider/>
     </div>
   );
 };
