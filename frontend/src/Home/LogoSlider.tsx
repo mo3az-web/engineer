@@ -40,24 +40,66 @@ const companies = [
     name: "Company 8",
     logo: "/hada.webp",
   },
+   {
+    name: "Company 8",
+    logo: "/SAE.webp",
+  },
+   {
+    name: "Company 8",
+    logo: "/SM.webp",
+  },
+    {
+    name: "Company 8",
+    logo: "/Cosmopack.webp",
+  },
+    {
+    name: "Company 8",
+    logo: "/NILE.webp",
+  },
+    {
+    name: "Company 8",
+    logo: "/ALR.webp",
+  },
+    {
+    name: "Company 8",
+    logo: "/ALZAMEL.webp",
+  },
+    {
+    name: "Company 8",
+    logo: "/QAHTAN.webp",
+  },
+   {
+    name: "Company 8",
+    logo: "/EIN.webp",
+  },
+     {
+    name: "Company 8",
+    logo: "/MANS.webp",
+  },
+       {
+    name: "Company 8",
+    logo: "/HAIL.webp",
+  },
+       {
+    name: "Company 8",
+    logo: "/JOUF.webp",
+  },
 ];
 
 const LogoSlider = () => {
   return (
-    <section className="w-full overflow-hidden py-16">
+    <section className="w-full overflow-hidden  py-16">
       {/* Title */}
       <div className="mb-10 text-center">
         <p className="text-sm font-medium tracking-[0.3em] text-slate-500">
           TRUSTED BY
         </p>
 
-        <h2 className="mt-3 text-2xl font-semibold text-slate-900 md:text-3xl">
-          الشركات و الجهات الحكوميه التي تشرفنا بالعمل معها
-        </h2>
+
       </div>
 
       {/* Slider */}
-      <div className="relative w-full overflow-hidden">
+      <div className="relative w-full h-50  ">
         <div className="flex w-max animate-logo-slider hover:[animation-play-state:paused]">
 
           {/* First set */}

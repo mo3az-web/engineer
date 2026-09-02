@@ -105,7 +105,7 @@ const Projects = () => {
 
             <div className="mt-12 flex flex-wrap gap-10">
               <div>
-                <p className="text-4xl font-bold text-slate-950">30+</p>
+                <p className="text-4xl font-bold text-slate-950">35+</p>
                 <p className="mt-2 text-sm text-slate-500">عامًا من الخبرة</p>
               </div>
 
@@ -113,7 +113,7 @@ const Projects = () => {
 
               <div>
                 <p className="text-4xl font-bold text-slate-950">
-                  {totalProjectsCount}+
+                  300+
                 </p>
                 <p className="mt-2 text-sm text-slate-500">مشروع منفذ</p>
               </div>
