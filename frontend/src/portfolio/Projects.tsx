@@ -132,7 +132,7 @@ const Projects = () => {
       {/* =========================
           SEARCH & FILTER BAR
       ========================== */}
-      <section className="sticky top-0 z-20 border-b border-slate-200 bg-white/90 backdrop-blur-md">
+      <section className=" top-0 z-20 border-b border-slate-200 bg-white/90 backdrop-blur-md">
         <div className="mx-auto max-w-7xl px-6 py-6 sm:px-8 lg:px-12">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-center">
             {/* Search input */}
