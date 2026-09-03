@@ -12,7 +12,7 @@ const App = () => {
         <Routes>
       
           <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="engineering-ztpc-theta.vercel.app/projects" element={<Projects />} />
           
         </Routes>
       </div>
