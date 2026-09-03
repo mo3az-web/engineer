@@ -9,7 +9,7 @@ export default defineConfig({
        
       
   ],
-  base: process.env.VITE_BASE_PATH || "/",
+  base: process.env.VITE_BASE_PATH || "/https://engineering-ztpc-theta.vercel.app",
     resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
