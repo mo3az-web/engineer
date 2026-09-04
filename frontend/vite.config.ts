@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: process.env.VITE_BASE_PATH || "/",
+  base: process.env.VITE_BASE_PATH || "/engineering/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
