@@ -167,7 +167,7 @@ useEffect(() => {
         <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:gap-x-6">
 
           <a
-            href="#contact"
+            href="/contact"
             className="rounded-full bg-red-600 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-red-600/20 transition hover:bg-red-500 hover:shadow-red-600/30"
           >
             تواصل معنا
@@ -267,14 +267,14 @@ useEffect(() => {
 
                     <DisclosurePanel className="mt-1 space-y-1 pr-4">
 
-                      {services.map((service) => (
+                      {navigation .map((navigationItem) => (
                         <a
-                          key={service.name}
-                          href={service.href}
+                          key={navigationItem.name}
+                          href={navigationItem.href}
                           onClick={() => setMobileMenuOpen(false)}
                           className="block rounded-lg px-4 py-3 text-sm text-gray-400 transition hover:bg-white/5 hover:text-white"
                         >
-                          {service.name}
+                          {navigationItem.name}
                         </a>
                       ))}
 
@@ -304,7 +304,7 @@ useEffect(() => {
             <div className="mt-8 border-t border-white/10 pt-8">
 
               <a
-                href="#contact"
+                href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block rounded-xl bg-red-600 px-5 py-3.5 text-center text-sm font-bold text-white transition hover:bg-red-500"
               >
