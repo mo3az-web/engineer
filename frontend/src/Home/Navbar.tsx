@@ -34,9 +34,9 @@ const services = [
 
 const navigation = [
   { name: 'الرئيسية', href: '/' },
-  { name: 'عن المكتب', href: 'about' },
-  { name: 'مشاريعنا', href: 'project' },
-  { name: 'تواصل معنا', href: 'contact' },
+  { name: 'عن المكتب', href: '/about' },
+  { name: 'مشاريعنا', href: '/projects' },
+  { name: 'تواصل معنا', href: '/contact' },
 ]
 
 export default function Navbar() {
