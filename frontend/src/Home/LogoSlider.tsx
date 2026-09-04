@@ -112,7 +112,7 @@ const LogoSlider = () => {
                 <img
                   src={company.logo}
                   alt={company.name}
-                  className="max-h-36 max-w-[140px] object-contain grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100"
+                  className="max-h-36 max-w-[140px] object-contain  opacity-60 transition duration-300  hover:opacity-100"
                 />
               </div>
             ))}
@@ -128,7 +128,7 @@ const LogoSlider = () => {
                 <img
                   src={company.logo}
                   alt={company.name}
-                  className="max-h-36 max-w-[140px] object-contain grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100"
+                  className="max-h-36 max-w-[140px] object-contain  opacity-60 transition duration-300  hover:opacity-100"
                 />
               </div>
             ))}

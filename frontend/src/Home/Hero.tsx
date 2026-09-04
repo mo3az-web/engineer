@@ -2,7 +2,7 @@
 import { Canvas } from "@react-three/fiber";
 import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-
+import { Link } from "react-router-dom";
 import SprinklerView from "./modelsView/fireSprinklerModelViewer";
 import { StudioLights } from "./3dHelpers/StudioLight";
 
@@ -330,21 +330,22 @@ const FireModel = () => {
 
         {/* ================= 3D ================= */}
 
-        <div className="relative z-10 h-full w-full">
-          <Canvas
-            camera={{
-              position: [0, 5, 5],
-              fov: 50,
-              near: 0.1,
-              far: 100,
-            }}
-            gl={{ alpha: true }}
-          >
-            <StudioLights />
-
-            <SprinklerView isHovered={isActive} />
-          </Canvas>
-        </div>
+     <div
+  className="block h-full w-full cursor-pointer"
+>
+  <Canvas
+    camera={{
+      position: [0, 5, 5],
+      fov: 50,
+      near: 0.1,
+      far: 100,
+    }}
+    gl={{ alpha: true }}
+  >
+    <StudioLights />
+    <SprinklerView isHovered={isActive} />
+  </Canvas>
+</div>
 
       </div>
 

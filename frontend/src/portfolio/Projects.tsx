@@ -316,46 +316,7 @@ const Projects = () => {
               </div>
             </div>
 
-            {/* =========================
-                3D MODEL PLACEHOLDER
-            ========================== */}
-            <div
-              className="
-                relative mb-20 flex h-[420px] w-full items-center justify-center
-                overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50
-                sm:h-[500px] lg:h-[620px]
-              "
-            >
-              <div className="absolute left-6 top-6 h-8 w-8 border-l border-t border-emerald-400/60" />
-              <div className="absolute right-6 top-6 h-8 w-8 border-r border-t border-emerald-400/60" />
-              <div className="absolute bottom-6 left-6 h-8 w-8 border-b border-l border-emerald-400/60" />
-              <div className="absolute bottom-6 right-6 h-8 w-8 border-b border-r border-emerald-400/60" />
-
-              <div className="text-center">
-                <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full border border-slate-200 bg-white shadow-sm">
-                  <svg
-                    className="h-8 w-8 text-emerald-500"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M21 7.5 12 3 3 7.5m18 0v9L12 21l-9-4.5v-9m18 0-9 4.5m0 9v-9m0 0L3 7.5"
-                    />
-                  </svg>
-                </div>
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
-                  {section.modelLabel}
-                </p>
-                <p className="mt-3 text-sm text-slate-400">
-                  ضع نموذج الـ 3D هنا
-                </p>
-              </div>
-            </div>
-
+  
             {/* =========================
                 PROJECTS
             ========================== */}
