@@ -74,7 +74,7 @@ useEffect(() => {
             href="/"
             className="text-sm font-semibold text-white transition hover:text-red-400"
           >
-            الرئيسية
+            الرئيسي
           </a>
 
           {/* Services Dropdown */}
