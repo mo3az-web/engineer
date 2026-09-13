@@ -8,12 +8,10 @@ Title: Apple iPhone 15 Pro Max Black
 */
 
 import * as THREE from 'three'
-import React from 'react'
-import { useGLTF, useTexture, useVideoTexture } from '@react-three/drei'
+
+import { useGLTF,  useVideoTexture } from '@react-three/drei'
 import type { GLTF } from 'three-stdlib'
 import type { JSX } from 'react'
-import { texture } from 'three/src/nodes/accessors/TextureNode.js'
-
 type GLTFResult = GLTF & {
   nodes: {
     ttmRoLdJipiIOmf: THREE.Mesh

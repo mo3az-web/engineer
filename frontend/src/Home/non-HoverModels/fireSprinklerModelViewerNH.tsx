@@ -4,7 +4,6 @@ import { MotionValue } from "framer-motion";
 import { useRef } from "react";
 import * as THREE from "three";
 import SprinklerModel from "../../models/Fire_sprinkler";
-import type SprinklerView from "../modelsView/fireSprinklerModelViewer";
 
 interface SprinklerViewProps {
   scrollRotation: MotionValue<number>;

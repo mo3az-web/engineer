@@ -10,11 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
    COLORS
 ========================================================= */
 
-const COLORS = {
-  black: "#000000",
-  white: "#ffffff",
-  blue: "#2563eb",
-};
+
 
 /* =========================================================
    FADE UP

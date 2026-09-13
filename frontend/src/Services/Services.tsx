@@ -1,20 +1,3 @@
-import {
-  AirVent,
-  Flame,
-  Wind,
-  Droplets,
-  Waves,
-  Hospital,
-  Sprout,
-  Zap,
-  Bell,
-  Network,
-  Camera,
-  Phone,
-  Volume2,
-  Tv,
-  Factory,
-} from "lucide-react";
 
 type Service = {
   title: string;
@@ -227,7 +210,7 @@ const Services = () => {
           </div>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {mechanicalServices.map((service, index) => (
+            {mechanicalServices.map((service) => (
   <ServiceCard
     key={service.title}
     service={service}
@@ -261,7 +244,7 @@ const Services = () => {
           </div>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {electricalServices.map((service, index) => (
+            {electricalServices.map((service) => (
               <ServiceCard
                 key={service.title}
                 service={service}

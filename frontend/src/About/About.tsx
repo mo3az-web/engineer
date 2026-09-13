@@ -6,7 +6,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Ahero from "./Ahero";
 import Inner from "../inner/Inner";
 import Offer from "./whatWeOffer";
-import Location from "../Contact/Location";
 import OfficeOverview from "./overView";
 
 const About = () => {
