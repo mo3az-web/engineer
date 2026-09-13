@@ -1030,6 +1030,41 @@ const AboutEng = () => {
                       تخصص مكافحة الحريق
                     </p>
                   </div>
+                         {/* CARD 3 */}
+
+                  <div
+                    className="
+                      rounded-xl
+                      border
+                      border-blue-600
+                      bg-white
+                      p-5
+                      transition-colors
+                      duration-300
+                      hover:bg-blue-600
+                      sm:p-6
+                    "
+                  >
+                    <p className="text-sm text-blue-600">
+                    2025 / 8 / 26
+                    </p>
+
+                    <h3
+                      className="
+                        mt-2
+                        text-lg
+                        font-semibold
+                        text-black
+                        sm:text-xl
+                      "
+                    >
+                    مهندسا استشاريا في التخطيط والهندسة الصناعية
+                    </h3>
+
+                    <p className="mt-2 text-sm text-blue-600">
+                    تخصص  الاعمال الصحية 
+                    </p>
+                  </div>
                 </div>
               </AnimatedSection>
 
