@@ -1,4 +1,3 @@
-
 const Ahero = () => {
   return (
     <section className="relative min-h-screen pt-24 overflow-hidden flex items-center justify-center">
@@ -60,19 +59,15 @@ const Ahero = () => {
 
       {/* Left vertical engineering line */}
       <div className="absolute left-8 md:left-14 top-1/2 -translate-y-1/2 hidden md:flex flex-col items-center">
-
         <div className="h-28 w-px bg-blue-200/20" />
 
         <div className="my-4 w-2 h-2 border border-blue-200/40 rotate-45" />
 
         <div className="h-24 w-px bg-blue-200/20" />
-
       </div>
-
 
       {/* Right decorative line */}
       <div className="absolute right-8 md:right-14 top-1/3 hidden md:block">
-
         <div className="flex items-center gap-3">
           <span className="w-10 h-px bg-blue-200/20" />
 
@@ -82,50 +77,71 @@ const Ahero = () => {
         </div>
 
         <div className="mt-3 ml-14 w-px h-20 bg-blue-200/10" />
-
       </div>
-
 
       {/* ================= CONTENT ================= */}
 
       <div className="relative z-20 w-full max-w-7xl mx-auto px-6 text-center">
 
         {/* Office name */}
-
         <div className="relative z-30">
 
           <div className="flex items-center justify-center gap-4 mb-5">
-
             <span className="w-12 h-px bg-blue-300/30" />
 
-            <p className="text-sm md:text-base tracking-[0.4em] text-blue-200 uppercase font-medium">
+            <p className="text-sm md:text-base tracking-[0.4em] text-black uppercase font-medium">
               Engineering Office
             </p>
 
             <span className="w-12 h-px bg-blue-300/30" />
-
           </div>
-
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
             المكتب الهندسي للكهروميكانيكا
           </h1>
 
-
-          <p  className="mt-5 text-blue-100/75 text-lg md:text-xl font-light">
+          <p className="mt-5 text-black text-lg md:text-xl font-light">
             للاستشارات الهندسية وأعمال الكهروميكانيكا
           </p>
 
-        </div>
+          {/* ================= STATS ================= */}
 
+          <div className="mt-8 flex items-center justify-center gap-8 md:gap-16">
+
+            {/* Experience */}
+            <div className="flex flex-col items-center">
+              <span className="text-3xl md:text-5xl font-bold text-blue-600 leading-none">
+                30+
+              </span>
+
+              <span className="mt-2 text-xs md:text-sm text-black/60 tracking-wide">
+                سنة خبرة
+              </span>
+            </div>
+
+            {/* Divider */}
+            <div className="h-12 w-px bg-black/10" />
+
+            {/* Projects */}
+            <div className="flex flex-col items-center">
+              <span className="text-3xl md:text-5xl font-bold text-blue-600 leading-none">
+                300+
+              </span>
+
+              <span className="mt-2 text-xs md:text-sm text-black/60 tracking-wide">
+                مشروع منجز
+              </span>
+            </div>
+
+          </div>
+
+        </div>
 
         {/* ================= ENGINEER ================= */}
 
         <div className="relative mt-8 md:mt-12 h-[550px] md:h-[640px] flex items-end justify-center">
 
-
           {/* Technical circle behind engineer */}
-
           <div
             className="
               absolute
@@ -142,9 +158,7 @@ const Ahero = () => {
             "
           />
 
-
           {/* Dashed circle */}
-
           <div
             className="
               absolute
@@ -162,9 +176,7 @@ const Ahero = () => {
             "
           />
 
-
           {/* Horizontal technical line */}
-
           <div
             className="
               absolute
@@ -178,9 +190,7 @@ const Ahero = () => {
             "
           />
 
-
           {/* Vertical technical line */}
-
           <div
             className="
               absolute
@@ -193,23 +203,17 @@ const Ahero = () => {
             "
           />
 
-
           {/* Corner markers */}
-
           <div className="absolute bottom-32 left-[15%] md:left-[25%] w-6 h-6 border-l border-b border-blue-200/20" />
 
           <div className="absolute bottom-32 right-[15%] md:right-[25%] w-6 h-6 border-r border-b border-blue-200/20" />
 
-
           {/* Small technical points */}
-
           <div className="absolute bottom-[48%] left-[18%] md:left-[27%] w-1.5 h-1.5 rounded-full bg-blue-300/50" />
 
           <div className="absolute bottom-[40%] right-[18%] md:right-[27%] w-1.5 h-1.5 rounded-full bg-blue-300/50" />
 
-
           {/* Engineer */}
-
           <div
             className="
               relative
@@ -220,7 +224,6 @@ const Ahero = () => {
               items-end
             "
           >
-
             <img
               src="/engineer.png"
               alt="Engineer"
@@ -231,12 +234,9 @@ const Ahero = () => {
                 drop-shadow-[0_25px_35px_rgba(0,0,0,0.45)]
               "
             />
-
           </div>
 
-
           {/* Bottom technical information */}
-
           <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex items-center gap-3 opacity-40">
 
             <span className="text-[8px] tracking-[0.3em] text-blue-100">
@@ -261,9 +261,7 @@ const Ahero = () => {
 
       </div>
 
-
       {/* Bottom fade */}
-
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-blue-900 to-transparent pointer-events-none" />
 
     </section>

@@ -27,6 +27,6 @@ body {
   background-attachment: fixed;
 }
 
-footer#contact {
-  background-color: #172554 !important;
+footer {
+  background-color: #000000 !important;
 }

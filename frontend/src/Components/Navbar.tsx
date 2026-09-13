@@ -19,7 +19,7 @@ export default function Navbar() {
     `text-sm font-semibold transition-colors duration-300 ${
       isActive
         ? "text-blue-800"
-        : "text-black hover:text-blue-800"
+        : "text-white hover:text-blue-800"
     }`;
 
   const mobileLinkClass = ({ isActive }: { isActive: boolean }) =>
@@ -32,7 +32,7 @@ export default function Navbar() {
   return (
     <header
       dir="rtl"
-      className="fixed left-0 top-0 z-50 w-full border-b border-black/10 bg-white/95 text-black backdrop-blur-md"
+      className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-black/95 text-white backdrop-blur-md"
     >
       <nav className="relative mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         
@@ -83,10 +83,10 @@ export default function Navbar() {
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              `rounded-full px-5 py-2.5 text-sm font-bold text-white shadow-lg transition-all duration-300 ${
+              `rounded-full px-5 py-2.5 text-sm font-bold text-black shadow-lg transition-all duration-300 ${
                 isActive
                   ? "bg-blue-800 shadow-blue-800/20"
-                  : "bg-black shadow-black/10 hover:bg-blue-800 hover:shadow-blue-800/20"
+                  : "bg-white shadow-black/10 hover:bg-blue-800 hover:shadow-blue-800/20"
               }`
             }
           >
@@ -99,7 +99,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="rounded-lg p-2.5 text-blue-800 transition-all duration-300 hover:bg-blue-50 hover:text-black"
+            className="rounded-lg p-2.5 text-black-800 transition-all duration-300 hover:bg-blue-50 hover:text-black"
             aria-label="فتح القائمة"
           >
             <Bars3Icon className="size-7" />
