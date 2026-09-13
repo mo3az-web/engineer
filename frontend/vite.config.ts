@@ -7,6 +7,6 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: process.env.VITE_BASE_PATH || "/engineer",
+  base: process.env.VITE_BASE_PATH || "/",
  
 });
