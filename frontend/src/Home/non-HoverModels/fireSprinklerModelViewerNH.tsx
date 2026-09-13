@@ -1,0 +1,43 @@
+import { PresentationControls } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
+import { MotionValue } from "framer-motion";
+import { useRef } from "react";
+import * as THREE from "three";
+import SprinklerModel from "../../models/Fire_sprinkler";
+import type SprinklerView from "../modelsView/fireSprinklerModelViewer";
+
+interface SprinklerViewProps {
+  scrollRotation: MotionValue<number>;
+}
+
+const SprinklerViewNoHover = ({ scrollRotation }: SprinklerViewProps) => {
+  const modelRef = useRef<THREE.Group>(null);
+
+  const controlsConfig = {
+    snap: true,
+    speed: 1,
+    zoom: 1,
+    azimuth: [-Infinity, Infinity] as [number, number],
+    config: {
+      mass: 1,
+      tension: 0,
+      friction: 26,
+    },
+  };
+
+  useFrame(() => {
+    if (modelRef.current) {
+      modelRef.current.rotation.y = scrollRotation.get();
+    }
+  });
+
+  return (
+    <PresentationControls {...controlsConfig}>
+      <group ref={modelRef} scale={[0.2, 0.2, 0.2]}>
+        <SprinklerModel />
+      </group>
+    </PresentationControls>
+  );
+};
+
+export default SprinklerViewNoHover;

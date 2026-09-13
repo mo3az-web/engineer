@@ -1,139 +1,139 @@
-
 const companies = [
   {
-    name: "Company 1",
+    name: "Al Morshedy",
     logo: "/ALmorshedy.webp",
   },
   {
-    name: "Company 2",
+    name: "Marseilia",
     logo: "/marsilia.webp",
   },
   {
-    name: "Company 3",
+    name: "Alarab",
     logo: "/Alarab.webp",
   },
   {
-    name: "Company 4",
+    name: "TMG",
     logo: "/TMG.webp",
   },
   {
-    name: "Company 5",
+    name: "EALB",
     logo: "/ealb.webp",
   },
   {
-    name: "Company 6",
+    name: "BM",
     logo: "/bm.webp",
   },
-    {
-    name: "Company 7",
+  {
+    name: "ERW",
     logo: "/erw.webp",
   },
-   {
-    name: "Company 8",
+  {
+    name: "ERC",
     logo: "/ERC.webp",
   },
-   {
-    name: "Company 8",
+  {
+    name: "EEA",
     logo: "/eea.webp",
   },
-   {
-    name: "Company 8",
+  {
+    name: "HADA",
     logo: "/hada.webp",
   },
-   {
-    name: "Company 8",
+  {
+    name: "SAE",
     logo: "/SAE.webp",
   },
-   {
-    name: "Company 8",
+  {
+    name: "SM",
     logo: "/SM.webp",
   },
-    {
-    name: "Company 8",
+  {
+    name: "Cosmopack",
     logo: "/Cosmopack.webp",
   },
-    {
-    name: "Company 8",
+  {
+    name: "Nile",
     logo: "/NILE.webp",
   },
-    {
-    name: "Company 8",
+  {
+    name: "ALR",
     logo: "/ALR.webp",
   },
-    {
-    name: "Company 8",
+  {
+    name: "ALZAMEL",
     logo: "/ALZAMEL.webp",
   },
-    {
-    name: "Company 8",
+  {
+    name: "QAHTAN",
     logo: "/QAHTAN.webp",
   },
-   {
-    name: "Company 8",
+  {
+    name: "EIN",
     logo: "/EIN.webp",
   },
-     {
-    name: "Company 8",
+  {
+    name: "Mansoura",
     logo: "/MANS.webp",
   },
-       {
-    name: "Company 8",
+  {
+    name: "Hail",
     logo: "/HAIL.webp",
   },
-       {
-    name: "Company 8",
+  {
+    name: "Jouf",
     logo: "/JOUF.webp",
   },
 ];
 
 const LogoSlider = () => {
   return (
-    <section className="w-full overflow-hidden  py-16">
+    <section className="w-full overflow-hidden py-16">
       {/* Title */}
       <div className="mb-10 text-center">
         <p className="text-sm font-medium tracking-[0.3em] text-slate-500">
           TRUSTED BY
         </p>
-
-
       </div>
 
       {/* Slider */}
-      <div className="relative w-full h-50  ">
-        <div className="flex w-max animate-logo-slider hover:[animation-play-state:paused]">
-
+<div className="relative w-full overflow-hidden" dir="ltr">
+  <div className="flex w-max animate-logo-slider hover:[animation-play-state:paused]">
           {/* First set */}
-          <div className="flex items-center gap-16 px-8">
+          <div className="flex shrink-0 items-center gap-16 px-8">
             {companies.map((company) => (
               <div
                 key={company.name}
-                className="flex h-24 w-40 shrink-0 items-center justify-center"
+                className="flex h-28 w-40 shrink-0 items-center justify-center"
               >
                 <img
                   src={company.logo}
-                  alt={company.name}
-                  className="max-h-36 max-w-[140px] object-contain  opacity-60 transition duration-300  hover:opacity-100"
+                  alt={`${company.name} logo`}
+                  loading="lazy"
+                  className="max-h-24 max-w-[140px] object-contain opacity-60 lg:grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
                 />
               </div>
             ))}
           </div>
 
           {/* Duplicate set */}
-          <div className="flex items-center gap-16 px-8">
+          <div
+            className="flex shrink-0 items-center gap-16 px-8"
+            aria-hidden="true"
+          >
             {companies.map((company) => (
               <div
                 key={`${company.name}-duplicate`}
-                className="flex h-24 w-40 shrink-0 items-center justify-center"
+                className="flex h-28 w-40 shrink-0 items-center justify-center"
               >
                 <img
                   src={company.logo}
-                  alt={company.name}
-                  className="max-h-36 max-w-[140px] object-contain  opacity-60 transition duration-300  hover:opacity-100"
+                  alt=""
+                  loading="lazy"
+                  className="max-h-24 max-w-[140px] object-contain opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
                 />
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </section>

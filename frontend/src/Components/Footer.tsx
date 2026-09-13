@@ -4,15 +4,15 @@ const Footer = () => {
     <footer
       id="contact"
       dir="rtl"
-      className="relative overflow-hidden bg-slate-950 text-white"
+      className="relative overflow-hidden border-t border-blue-100 bg-white text-black"
     >
       {/* Decorative Grid */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage: `
-            linear-gradient(#fff 1px, transparent 1px),
-            linear-gradient(90deg, #fff 1px, transparent 1px)
+            linear-gradient(#2563eb 1px, transparent 1px),
+            linear-gradient(90deg, #2563eb 1px, transparent 1px)
           `,
           backgroundSize: "50px 50px",
         }}
@@ -31,7 +31,7 @@ const Footer = () => {
 
               {/* Logo */}
               <div className="flex h-14 w-34 shrink-0 items-center justify-center rounded-xl ">
-                <img src="logo1.png" className="text-2xl font-bold text-emerald-400">
+                <img src="logo1.png" className="text-2xl font-bold text-blue-600">
                   
                 </img>
               </div>
@@ -41,47 +41,20 @@ const Footer = () => {
                   مركز الاستشارات الهندسية
                 </h2>
 
-                <p className="mt-1 text-xs tracking-[0.18em] text-slate-500">
+                <p className="mt-1 text-xs tracking-[0.18em] text-blue-600">
                   ELEC. MEC. ENGINEERING CENTER
                 </p>
               </div>
 
             </div>
 
-            <p className="max-w-xl text-sm leading-8 text-slate-400">
+            <p className="max-w-xl text-sm leading-8 text-blue-700">
               مركز للاستشارات الهندسية وإدارة المشروعات، يقدم حلولًا هندسية
               متكاملة في مجالات الكهرباء والميكانيكا، مع الالتزام بالدقة
               والجودة وأعلى المعايير الهندسية في تنفيذ وإدارة المشروعات.
             </p>
 
-            {/* Social */}
-            <div className="mt-7 flex items-center gap-3">
-
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-sm text-slate-400 transition hover:border-emerald-400/40 hover:bg-emerald-400/10 hover:text-emerald-400"
-              >
-                in
-              </a>
-
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-sm text-slate-400 transition hover:border-emerald-400/40 hover:bg-emerald-400/10 hover:text-emerald-400"
-              >
-                f
-              </a>
-
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-sm text-slate-400 transition hover:border-emerald-400/40 hover:bg-emerald-400/10 hover:text-emerald-400"
-              >
-                IG
-              </a>
-
-            </div>
+        
           </div>
 
           {/* Navigation */}
@@ -89,11 +62,11 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="mb-6 text-sm font-semibold tracking-widest text-white">
+            <h3 className="mb-6 text-sm font-semibold tracking-widest text-black">
               خدماتنا
             </h3>
 
-            <ul className="space-y-4 text-sm leading-6 text-slate-400">
+            <ul className="space-y-4 text-sm leading-6 text-blue-700">
               <li>الاستشارات الهندسية</li>
               <li>إدارة المشروعات</li>
               <li>الأعمال الكهربائية</li>
@@ -105,9 +78,9 @@ const Footer = () => {
         </div>
 
         {/* Contact Information */}
-        <div className="mt-16 border-t border-white/10 pt-10">
+        <div className="mt-16 border-t border-blue-100 pt-10">
 
-          <h3 className="mb-8 text-lg font-semibold text-white">
+          <h3 className="mb-8 text-lg font-semibold text-black">
             بيانات التواصل
           </h3>
 
@@ -115,29 +88,29 @@ const Footer = () => {
 
             {/* Consultant */}
             <div>
-              <p className="mb-2 text-xs tracking-widest text-slate-500">
+              <p className="mb-2 text-xs tracking-widest text-blue-600">
                 الاستشاري
               </p>
 
-              <p className="text-sm leading-7 text-slate-300">
+              <p className="text-sm leading-7 text-blue-700">
                 م / أشرف عبد الحميد طه
               </p>
 
-              <p className="text-xs text-slate-500">
+              <p className="text-xs text-blue-600">
                 استشاري هندسي
               </p>
             </div>
 
             {/* Phone 1 */}
             <div>
-              <p className="mb-2 text-xs tracking-widest text-slate-500">
+              <p className="mb-2 text-xs tracking-widest text-blue-600">
                 الهاتف
               </p>
 
               <a
                 href="tel:01228008588"
                 dir="ltr"
-                className="block text-sm text-slate-300 transition hover:text-emerald-400"
+                className="block text-sm text-blue-700 transition hover:text-blue-600"
               >
                 01228008588
               </a>
@@ -145,7 +118,7 @@ const Footer = () => {
               <a
                 href="tel:0502705046"
                 dir="ltr"
-                className="mt-1 block text-sm text-slate-300 transition hover:text-emerald-400"
+                className="mt-1 block text-sm text-blue-700 transition hover:text-blue-600"
               >
                 050 2705046
               </a>
@@ -153,26 +126,25 @@ const Footer = () => {
 
             {/* Address */}
             <div>
-              <p className="mb-2 text-xs tracking-widest text-slate-500">
+              <p className="mb-2 text-xs tracking-widest text-blue-600">
                 العنوان
               </p>
 
-              <p className="text-sm leading-7 text-slate-300">
-                شارع الجيش
-                <br />
-                مدينة المنصورة
+              <p className="text-sm leading-7 text-blue-700">
+            شقة 5- عمارة 446 - الهرم - مجمع نصر الدين- القاهرة- جمهورية مصر
+العربية.
               </p>
             </div>
 
             {/* Fax */}
             <div>
-              <p className="mb-2 text-xs tracking-widest text-slate-500">
+              <p className="mb-2 text-xs tracking-widest text-blue-600">
                 الفاكس
               </p>
 
               <p
                 dir="ltr"
-                className="text-sm text-slate-300"
+                className="text-sm text-blue-700"
               >
                 050 2705046
               </p>
@@ -181,9 +153,9 @@ const Footer = () => {
           </div>
 
           {/* Emails */}
-          <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+          <div className="mt-8 rounded-2xl border border-blue-100 bg-white p-6">
 
-            <p className="mb-4 text-xs tracking-widest text-slate-500">
+            <p className="mb-4 text-xs tracking-widest text-blue-600">
               البريد الإلكتروني
             </p>
 
@@ -192,25 +164,17 @@ const Footer = () => {
               <a
                 href="mailto:elec_mech_center10@yahoo.com"
                 dir="ltr"
-                className="text-sm text-slate-300 transition hover:text-emerald-400"
+                className="text-sm text-blue-700 transition hover:text-blue-600"
               >
-                elec_mech_center10@yahoo.com
+                at196518@gmail.com
               </a>
 
               <a
                 href="mailto:at_1965@yahoo.com"
                 dir="ltr"
-                className="text-sm text-slate-300 transition hover:text-emerald-400"
+                className="text-sm text-blue-700 transition hover:text-blue-600"
               >
                 at_1965@yahoo.com
-              </a>
-
-              <a
-                href="mailto:ahmedelsheemy2@gmail.com"
-                dir="ltr"
-                className="text-sm text-slate-300 transition hover:text-emerald-400"
-              >
-                ahmedelsheemy2@gmail.com
               </a>
 
             </div>
@@ -220,16 +184,14 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-slate-500 md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 flex flex-col gap-4 border-t border-blue-100 pt-6 text-xs text-blue-600 md:flex-row md:items-center md:justify-between">
 
           <p>
             © {new Date().getFullYear()} مركز الاستشارات الهندسية.
             جميع الحقوق محفوظة.
           </p>
 
-          <p>
-            تصميم وتطوير الموقع بدقة واحترافية.
-          </p>
+         
 
         </div>
 

@@ -1,15 +1,15 @@
 
-import AboutEng from "../portfolio/AboutEng";
+import AboutEng from "./AboutEng";
 import Hero from "./Hero";
 import LogoSlider from "./LogoSlider";
-
+import Inner from "../inner/Inner";
 const Home = () => {
   return (
-   <div >
+   <Inner>
       <Hero/>
       <AboutEng/>
       <LogoSlider/>
-    </div>
+    </Inner>
   );
 };
 
