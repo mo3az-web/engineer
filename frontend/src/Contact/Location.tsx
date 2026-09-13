@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const TOTAL_FRAMES = 366;
 const FRAME_PATH = (i: number) =>
-  `public/frames/frame_${String(i).padStart(4, "0")}.webp`;
+  `frames/frame_${String(i).padStart(4, "0")}.webp`;
 
 const Location = () => {
   const containerRef = useRef<HTMLDivElement>(null);
