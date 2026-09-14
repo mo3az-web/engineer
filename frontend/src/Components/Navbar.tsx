@@ -32,7 +32,7 @@ export default function Navbar() {
   return (
     <header
       dir="rtl"
-      className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-black/95 text-white backdrop-blur-md"
+      className="fixed left-0 top-0 z-1000 w-full border-b border-white/10 bg-black/95 text-white backdrop-blur-md"
     >
       <nav className="relative mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         
