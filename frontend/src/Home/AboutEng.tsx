@@ -113,127 +113,101 @@ const EngineerIntro = () => {
   const labelRef = useRef<HTMLParagraphElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const section = sectionRef.current;
-    const name = nameRef.current;
-    const subtitle = subtitleRef.current;
-    const label = labelRef.current;
-    const scrollIndicator = scrollRef.current;
+useEffect(() => {
+  const section = sectionRef.current;
+  const name = nameRef.current;
+  const subtitle = subtitleRef.current;
+  const label = labelRef.current;
+  const scrollIndicator = scrollRef.current;
 
-    if (
-      !section ||
-      !name ||
-      !subtitle ||
-      !label ||
-      !scrollIndicator
-    ) {
-      return;
-    }
+  if (!section || !name || !subtitle || !label || !scrollIndicator) {
+    return;
+  }
 
-    const ctx = gsap.context(() => {
-      /* =========================================
-         MASTER TIMELINE
-      ========================================= */
+  const ctx = gsap.context(() => {
+    // Set guaranteed initial states
+    gsap.set(name, {
+      scale: 4,
+      opacity: 0.35,
+      filter: "blur(14px)",
+    });
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: section,
+    gsap.set(label, {
+      opacity: 0,
+      y: 25,
+    });
 
-          start: "top top",
-          end: "bottom bottom",
+    gsap.set(subtitle, {
+      opacity: 0,
+      y: 40,
+      scale: 0.9,
+      filter: "blur(10px)",
+    });
 
-          scrub: 1,
+    gsap.set(scrollIndicator, {
+      opacity: 1,
+    });
 
-          pin: false,
-        },
-      });
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 1,
+        invalidateOnRefresh: true,
+      },
+    });
 
-      /* =========================================
-         1 — HUGE NAME
-      ========================================= */
+    // NAME
+    tl.to(name, {
+      scale: 1,
+      opacity: 1,
+      filter: "blur(0px)",
+      duration: 3,
+      ease: "none",
+    });
 
-      tl.fromTo(
-        name,
-        {
-          scale: 4,
-          opacity: 0.35,
-          filter: "blur(14px)",
-        },
-        {
-          scale: 1,
-          opacity: 1,
-          filter: "blur(0px)",
+    // LABEL
+    tl.to(
+      label,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "none",
+      },
+      "-=0.5"
+    );
 
-          duration: 3,
+    // DESCRIPTION
+    tl.to(subtitle, {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      filter: "blur(0px)",
+      duration: 1.2,
+      ease: "none",
+    });
 
-          ease: "none",
-        }
-      );
+    // SCROLL INDICATOR
+    tl.to(
+      scrollIndicator,
+      {
+        opacity: 0,
+        duration: 0.5,
+        ease: "none",
+      },
+      "<"
+    );
 
-      /* =========================================
-         2 — LABEL
-      ========================================= */
+    // Important after layout/sticky calculations
+    ScrollTrigger.refresh();
+  }, section);
 
-      tl.fromTo(
-        label,
-        {
-          opacity: 0,
-          y: 25,
-        },
-        {
-          opacity: 1,
-          y: 0,
-
-          duration: 0.8,
-
-          ease: "none",
-        },
-        "-=0.5"
-      );
-
-      /* =========================================
-         3 — DESCRIPTION
-      ========================================= */
-
-      tl.fromTo(
-        subtitle,
-        {
-          opacity: 0,
-          y: 40,
-          scale: 0.9,
-          filter: "blur(10px)",
-        },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          filter: "blur(0px)",
-
-          duration: 1.2,
-
-          ease: "none",
-        }
-      );
-
-      /* =========================================
-         4 — SCROLL INDICATOR
-      ========================================= */
-
-      tl.to(
-        scrollIndicator,
-        {
-          opacity: 0,
-
-          duration: 0.5,
-
-          ease: "none",
-        },
-        "<"
-      );
-    }, section);
-
-    return () => ctx.revert();
-  }, []);
+  return () => {
+    ctx.revert();
+  };
+}, []);
 
   return (
     <section
