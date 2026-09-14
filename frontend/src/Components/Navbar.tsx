@@ -1,11 +1,10 @@
-import { Dialog, DialogPanel } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { NavLink } from "react-router-dom";
+
+import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -16,14 +15,7 @@ export default function Navbar() {
   }, []);
 
   const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-    `text-sm font-semibold transition-colors duration-300 ${
-      isActive
-        ? "text-blue-800"
-        : "text-white hover:text-blue-800"
-    }`;
-
-  const mobileLinkClass = ({ isActive }: { isActive: boolean }) =>
-    `block rounded-xl px-4 py-3.5 text-base font-semibold transition-all duration-300 ${
+    `block px-4 py-3 text-sm font-semibold transition-all duration-300 ${
       isActive
         ? "bg-blue-50 text-blue-800"
         : "text-black hover:bg-blue-50 hover:text-blue-800"
@@ -32,35 +24,151 @@ export default function Navbar() {
   return (
     <header
       dir="rtl"
-      className="fixed left-0 top-0 z-1000 w-full border-b border-white/10 bg-black/95 text-white backdrop-blur-md"
+      className="fixed left-0 top-0 z-[1000] w-full text-black"
     >
-      <nav className="relative mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-start lg:gap-x-8">
-          <NavLink to="/" className={navLinkClass}>
-            الرئيسية
-          </NavLink>
+      <nav className="relative mx-auto flex h-24 max-w-7xl items-center px-6">
 
-          <NavLink to="/services" className={navLinkClass}>
-            خدماتنا
-          </NavLink>
+        {/* Consultation Button */}
+        <Link
+          to={"/contact"}
+          className="
+            absolute right-6 top-1/2 -translate-y-1/2
+            hidden sm:block
+            border border-white/20
+            bg-white/10
+            px-5 py-3
+            text-sm font-medium
+            text-black
+            backdrop-blur-md
+            transition-all duration-300
+            hover:border-white/50
+            hover:bg-white/20
+          "
+        >
+          اطلب استشارة
+        </Link>
 
-          <NavLink to="/about" className={navLinkClass}>
-            عن المكتب
-          </NavLink>
+        {/* Menu */}
+        <div className="group absolute left-6 top-1/2 -translate-y-1/2">
 
-          <NavLink to="/projects" className={navLinkClass}>
-            مشاريعنا
-          </NavLink>
+          {/* Menu Button */}
+          <button
+            type="button"
+            onClick={() => setMenuOpen((prev) => !prev)}
+            className="
+              flex items-center gap-3
+              border border-white/20
+              bg-white/10
+              px-5 py-3
+              text-sm font-medium
+              text-white
+              backdrop-blur-md
+              transition-all duration-300
+              hover:border-white/50
+              hover:bg-white/20
+            "
+          >
+ 
+
+            <span
+              className={`
+                grid grid-cols-2 gap-[5px]
+                transition-transform duration-300
+                ${menuOpen ? "rotate-90" : ""}
+              `}
+            >
+              <span className="h-[4px] w-[4px] rounded-full bg-black" />
+              <span className="h-[4px] w-[4px] rounded-full bg-black" />
+              <span className="h-[4px] w-[4px] rounded-full bg-black" />
+              <span className="h-[4px] w-[4px] rounded-full bg-black" />
+            </span>
+          </button>
+
+          {/* Dropdown */}
+          <div
+            className={`
+              absolute left-0 top-full mt-3
+              w-72
+              origin-top-left
+              border border-black/10
+              bg-white/95
+              text-black
+              shadow-2xl
+              backdrop-blur-xl
+
+              transition-all
+              duration-300
+              ease-[cubic-bezier(0.22,1,0.36,1)]
+
+              ${
+                menuOpen
+                  ? "visible translate-y-0 scale-100 opacity-100"
+                  : "invisible translate-y-[-10px] scale-95 opacity-0"
+              }
+
+              group-hover:visible
+              group-hover:translate-y-0
+              group-hover:scale-100
+              group-hover:opacity-100
+            `}
+          >
+            <div className="p-2">
+
+              <NavLink
+                to="/"
+                onClick={() => setMenuOpen(false)}
+                className={navLinkClass}
+              >
+                الرئيسية
+              </NavLink>
+
+              <NavLink
+                to="/services"
+                onClick={() => setMenuOpen(false)}
+                className={navLinkClass}
+              >
+                خدماتنا
+              </NavLink>
+
+              <NavLink
+                to="/about"
+                onClick={() => setMenuOpen(false)}
+                className={navLinkClass}
+              >
+                عن المكتب
+              </NavLink>
+
+              <NavLink
+                to="/projects"
+                onClick={() => setMenuOpen(false)}
+                className={navLinkClass}
+              >
+                مشاريعنا
+              </NavLink>
+
+              <NavLink
+                to="/contact"
+                onClick={() => setMenuOpen(false)}
+                className={navLinkClass}
+              >
+                تواصل معنا
+              </NavLink>
+
+            </div>
+          </div>
         </div>
 
         {/* Logo */}
         <NavLink
           to="/"
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="
+            absolute left-1/2 top-1/2
+            -translate-x-1/2
+            -translate-y-1/2
+          "
         >
           <div className="relative h-32 w-40">
+
             <img
               src="/gear.png"
               alt=""
@@ -75,125 +183,11 @@ export default function Navbar() {
               alt="المركز الهندسي للكهروميكانيكا"
               className="relative top-6 w-50 object-contain"
             />
+
           </div>
         </NavLink>
 
-        {/* Desktop CTA */}
-        <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end">
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              `rounded-full px-5 py-2.5 text-sm font-bold text-black shadow-lg transition-all duration-300 ${
-                isActive
-                  ? "bg-blue-800 shadow-blue-800/20"
-                  : "bg-white shadow-black/10 hover:bg-blue-800 hover:shadow-blue-800/20"
-              }`
-            }
-          >
-            تواصل معنا
-          </NavLink>
-        </div>
-
-        {/* Mobile Button */}
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(true)}
-            className="rounded-lg p-2.5 text-black-800 transition-all duration-300 hover:bg-blue-50 hover:text-black"
-            aria-label="فتح القائمة"
-          >
-            <Bars3Icon className="size-7" />
-          </button>
-        </div>
       </nav>
-
-      {/* Mobile Menu */}
-      <Dialog
-        open={mobileMenuOpen}
-        onClose={setMobileMenuOpen}
-        className="relative z-50 lg:hidden"
-      >
-        <div
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm"
-          aria-hidden="true"
-        />
-
-        <DialogPanel className="fixed inset-y-0 right-0 w-full max-w-sm overflow-y-auto border-l border-black/10 bg-white px-6 py-6 shadow-2xl">
-          
-          <div className="flex items-center justify-between">
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(false)}
-              className="rounded-lg p-2 text-blue-800 transition-all duration-300 hover:bg-black/5 hover:text-black"
-              aria-label="إغلاق القائمة"
-            >
-              <XMarkIcon className="size-7" />
-            </button>
-
-            <img
-              src="/logo.png"
-              alt="المركز الهندسي للكهروميكانيكا"
-              className="w-20"
-            />
-          </div>
-
-          <div className="mt-10">
-            <div className="space-y-2">
-              
-              <NavLink
-                to="/"
-                onClick={() => setMobileMenuOpen(false)}
-                className={mobileLinkClass}
-              >
-                الرئيسية
-              </NavLink>
-
-              <NavLink
-                to="/about"
-                onClick={() => setMobileMenuOpen(false)}
-                className={mobileLinkClass}
-              >
-                عن المكتب
-              </NavLink>
-
-              <NavLink
-                to="/services"
-                onClick={() => setMobileMenuOpen(false)}
-                className={mobileLinkClass}
-              >
-                خدماتنا
-              </NavLink>
-
-              <NavLink
-                to="/projects"
-                onClick={() => setMobileMenuOpen(false)}
-                className={mobileLinkClass}
-              >
-                مشاريعنا
-              </NavLink>
-
-              <NavLink
-                to="/contact"
-                onClick={() => setMobileMenuOpen(false)}
-                className={mobileLinkClass}
-              >
-                تواصل معنا
-              </NavLink>
-
-            </div>
-
-            <div className="mt-8 border-t border-black/10 pt-8">
-              <NavLink
-                to="/contact"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block rounded-xl bg-black px-5 py-3.5 text-center text-sm font-bold text-white transition-all duration-300 hover:bg-blue-800"
-              >
-                تواصل معنا
-              </NavLink>
-            </div>
-          </div>
-        </DialogPanel>
-      </Dialog>
     </header>
   );
 }
