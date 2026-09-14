@@ -125,7 +125,6 @@ useEffect(() => {
   }
 
   const ctx = gsap.context(() => {
-    // Set guaranteed initial states
     gsap.set(name, {
       scale: 4,
       opacity: 0.35,
@@ -153,12 +152,10 @@ useEffect(() => {
         trigger: section,
         start: "top top",
         end: "bottom bottom",
-        scrub: 1,
-        invalidateOnRefresh: true,
+        scrub: true,
       },
     });
 
-    // NAME
     tl.to(name, {
       scale: 1,
       opacity: 1,
@@ -167,7 +164,6 @@ useEffect(() => {
       ease: "none",
     });
 
-    // LABEL
     tl.to(
       label,
       {
@@ -176,10 +172,9 @@ useEffect(() => {
         duration: 0.8,
         ease: "none",
       },
-      "-=0.5"
+      "-=0.4"
     );
 
-    // DESCRIPTION
     tl.to(subtitle, {
       opacity: 1,
       y: 0,
@@ -189,7 +184,6 @@ useEffect(() => {
       ease: "none",
     });
 
-    // SCROLL INDICATOR
     tl.to(
       scrollIndicator,
       {
@@ -199,14 +193,9 @@ useEffect(() => {
       },
       "<"
     );
-
-    // Important after layout/sticky calculations
-    ScrollTrigger.refresh();
   }, section);
 
-  return () => {
-    ctx.revert();
-  };
+  return () => ctx.revert();
 }, []);
 
   return (
@@ -300,7 +289,7 @@ useEffect(() => {
               uppercase
               tracking-[0.4em]
               text-blue-600
-              opacity-0
+            
               sm:text-sm
             "
           >

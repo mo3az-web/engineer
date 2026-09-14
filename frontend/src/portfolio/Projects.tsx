@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { projectSections } from "../Data/Data";
-import Inner from "../inner/Inner";
+
 
 const totalProjectsCount = projectSections.reduce(
   (sum, section) => sum + section.projects.length,
@@ -76,7 +76,7 @@ const Projects = () => {
     query.trim() !== "" || activeSections.length > 0;
 
   return (
-    <Inner>
+    <>
       {/* Hero */}
       <section className="border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-6 py-28 sm:px-8 lg:px-12 lg:py-36">
@@ -278,7 +278,7 @@ const Projects = () => {
           )}
         </div>
       </section>
-    </Inner>
+    </>
   );
 };
 

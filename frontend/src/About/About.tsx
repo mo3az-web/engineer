@@ -4,7 +4,6 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import Ahero from "./Ahero";
-import Inner from "../inner/Inner";
 import Offer from "./whatWeOffer";
 import OfficeOverview from "./overView";
 
@@ -23,7 +22,7 @@ const About = () => {
   );
 
   return (
-    <Inner>
+    <>
       {/* Hero */}
       <section
         ref={heroRef}
@@ -47,7 +46,7 @@ const About = () => {
 
       {/* Location */}
 
-    </Inner>
+    </>
   );
 };
 
