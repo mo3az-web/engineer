@@ -1,4 +1,3 @@
-
 type Service = {
   title: string;
   description: string;
@@ -113,11 +112,7 @@ const electricalServices: Service[] = [
   },
 ];
 
-const ServiceCard = ({
-  service,
-}: {
-  service: Service;
-}) => {
+const ServiceCard = ({ service }: { service: Service }) => {
   return (
     <article className="group relative overflow-hidden rounded-2xl border border-black/10 bg-white p-7 transition-all duration-500 hover:-translate-y-1 hover:border-blue-600 hover:shadow-xl hover:shadow-blue-600/10">
       <div className="flex items-start justify-between">
@@ -161,34 +156,55 @@ const ServiceCard = ({
 const Services = () => {
   return (
     <main className="bg-white text-black">
-      {/* Hero */}
-      <section className="px-6 pb-24 pt-36 md:px-12 lg:px-20">
-        <div className="mx-auto max-w-7xl">
+
+      {/* ================= HERO ================= */}
+      <section className="relative flex min-h-[80vh] items-center overflow-hidden px-6 py-32 md:px-12 lg:px-20">
+
+        {/* Background Image */}
+        <img
+          src="/About.jpeg"
+          alt="Engineering Services"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/60" />
+
+        {/* Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/20" />
+
+        {/* Hero Content */}
+        <div className="relative z-10 mx-auto w-full max-w-7xl">
           <div className="max-w-5xl">
-            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">
+
+            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.25em] text-blue-400">
               Our Services
             </p>
 
-            <h1 className="text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl lg:text-8xl">
+            <h1 className="text-5xl font-bold leading-[1.05] tracking-tight text-white md:text-7xl lg:text-8xl">
               الحلول الهندسية
               <br />
-              <span className="text-blue-600">المتكاملة.</span>
+
+              <span className="text-blue-400">
+                المتكاملة.
+              </span>
             </h1>
 
-            <p className="mt-8 max-w-3xl text-lg leading-8 text-blue-600/70 md:text-xl">
+            <p className="mt-8 max-w-3xl text-lg leading-8 text-white/70 md:text-xl">
               التصميم والإشراف على الأنظمة الهندسية الكهروميكانيكية،
               والدعم الفني، وإعداد المخططات التنفيذية والاختبارات واختبارات
               الجودة لمختلف المشروعات.
             </p>
           </div>
 
-          <div className="mt-16 h-px bg-black/10" />
+          <div className="mt-16 h-px bg-white/20" />
         </div>
       </section>
 
-      {/* Mechanical Services */}
+      {/* ================= MECHANICAL ================= */}
       <section className="px-6 py-20 md:px-12 lg:px-20">
         <div className="mx-auto max-w-7xl">
+
           <div className="mb-14 grid gap-8 md:grid-cols-[0.8fr_2fr]">
             <div>
               <span className="text-sm font-semibold tracking-[0.2em] text-blue-600">
@@ -211,19 +227,20 @@ const Services = () => {
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {mechanicalServices.map((service) => (
-  <ServiceCard
-    key={service.title}
-    service={service}
-   
-  />
-))}
+              <ServiceCard
+                key={service.title}
+                service={service}
+              />
+            ))}
           </div>
+
         </div>
       </section>
 
-      {/* Electrical Services */}
+      {/* ================= ELECTRICAL ================= */}
       <section className="bg-gray-50 px-6 py-24 md:px-12 lg:px-20">
         <div className="mx-auto max-w-7xl">
+
           <div className="mb-14 grid gap-8 md:grid-cols-[0.8fr_2fr]">
             <div>
               <span className="text-sm font-semibold tracking-[0.2em] text-blue-600">
@@ -248,18 +265,21 @@ const Services = () => {
               <ServiceCard
                 key={service.title}
                 service={service}
-         
               />
             ))}
           </div>
+
         </div>
       </section>
 
-      {/* Consultation */}
+      {/* ================= CONSULTATION ================= */}
       <section className="px-6 py-28 md:px-12 lg:px-20">
         <div className="mx-auto max-w-7xl">
+
           <div className="relative overflow-hidden rounded-3xl bg-black px-8 py-16 text-white md:px-16 md:py-20">
+
             <div className="relative z-10 max-w-3xl">
+
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-400">
                 Consultations & Project Management
               </p>
@@ -267,7 +287,10 @@ const Services = () => {
               <h2 className="mt-5 text-4xl font-bold leading-tight md:text-6xl">
                 خبرة هندسية
                 <br />
-                <span className="text-blue-500">في خدمة مشروعك.</span>
+
+                <span className="text-blue-500">
+                  في خدمة مشروعك.
+                </span>
               </h2>
 
               <p className="mt-7 max-w-2xl text-base leading-8 text-white/60 md:text-lg">
@@ -282,13 +305,18 @@ const Services = () => {
               >
                 تواصل معنا
               </a>
+
             </div>
 
+            {/* Decoration */}
             <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-blue-600/20 blur-3xl" />
+
             <div className="absolute -bottom-40 left-1/2 h-80 w-80 rounded-full bg-blue-500/10 blur-3xl" />
+
           </div>
         </div>
       </section>
+
     </main>
   );
 };
